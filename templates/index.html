@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Globals - AI & Data Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">ELITE GLOBALS</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <div class="loading-text">INITIALIZING SYSTEM...</div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-container">
+        <div class="bg-grid"></div>
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        
+        <div class="chart-lines">
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+        </div>
+        
+        <div class="candlesticks">
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+        </div>
+        
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="scan-line"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">Elite Globals</a>
+        <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="#members">Anggota</a></li>
+            <li><a href="#about">Tentang</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span>SYSTEM ONLINE</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">05</div>
+                    <div class="stat-label">Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Commitment</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Potential</div>
+                </div>
+            </div>
+
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Portfolio Kelompok Mahasiswa
+            </div>
+            
+            <h1>
+                <span class="hero-title-main">Elite Globals</span>
+                <span class="hero-title-sub">Future Ready Team</span>
+            </h1>
+            
+            <p>
+                Kami adalah tim mahasiswa yang berdedikasi menciptakan solusi inovatif 
+                di bidang teknologi, data science, dan artificial intelligence. 
+                Bersama-sama, kami membangun masa depan.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#members" class="btn btn-primary">Jelajahi Tim</a>
+                <a href="#about" class="btn btn-outline">Tentang Kami</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-mouse"></div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="section">
+        <div class="section-header">
+            <div class="section-label">Team Members</div>
+            <h2><span class="section-title-gradient">Anggota Kelompok</span></h2>
+            <p>Kenali lebih dekat setiap anggota tim Elite Globals</p>
+        </div>
+
+        <div class="members-grid">
+            <!-- Member 1 -->
+            <div class="glass-card member-card">
+                <div class="card-glow"></div>
+                <span class="card-index">#01</span>
+                <img src="{{ url_for('static', filename='images/member1.jpg') }}" alt="Member 1" class="member-card-image">
+                <h3>DIKA GANTENG</h3>
+                <p class="role">Ketua Kelompok</p>
+                <p class="desc">Memimpin tim dengan visi yang jelas dan semangat kolaborasi tinggi dalam setiap proyek.</p>
+                <a href="/member1" class="btn-view">Lihat Profil</a>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="glass-card member-card">
+                <div class="card-glow"></div>
+                <span class="card-index">#02</span>
+                <img src="{{ url_for('static', filename='images/member2.jpg') }}" alt="Member 2" class="member-card-image">
+                <h3>MAHMUD X MBAPPE</h3>
+                <p class="role">Data Analyst</p>
+                <p class="desc">Berkontribusi aktif dalam analisis data dengan kreativitas dan ketelitian tinggi.</p>
+                <a href="/member2" class="btn-view">Lihat Profil</a>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="glass-card member-card">
+                <div class="card-glow"></div>
+                <span class="card-index">#03</span>
+                <img src="{{ url_for('static', filename='images/member3.jpg') }}" alt="Member 3" class="member-card-image">
+                <h3>SETIYADI</h3>
+                <p class="role">AI Researcher</p>
+                <p class="desc">Membawa perspektif unik dan ide-ide segar untuk pengembangan solusi AI.</p>
+                <a href="/member3" class="btn-view">Lihat Profil</a>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="glass-card member-card">
+                <div class="card-glow"></div>
+                <span class="card-index">#04</span>
+                <img src="{{ url_for('static', filename='images/member4.jpg') }}" alt="Member 4" class="member-card-image">
+                <h3>RAPMOY</h3>
+                <p class="role">Developer</p>
+                <p class="desc">Fokus pada detail dan kualitas kode dalam setiap aplikasi yang dibangun.</p>
+                <a href="/member4" class="btn-view">Lihat Profil</a>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="glass-card member-card">
+                <div class="card-glow"></div>
+                <span class="card-index">#05</span>
+                <img src="{{ url_for('static', filename='images/member5.jpg') }}" alt="Member 5" class="member-card-image">
+                <h3>LALA</h3>
+                <p class="role">UI/UX Designer</p>
+                <p class="desc">Selalu siap membantu dan mendukung rekan tim dalam desain antarmuka.</p>
+                <a href="/member5" class="btn-view">Lihat Profil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <div class="section-label">About Us</div>
+            <h2><span class="section-title-gradient">Tentang Kami</span></h2>
+            <p>Visi, misi, dan nilai-nilai yang kami pegang teguh</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">🎯</div>
+                <h3>Visi</h3>
+                <p>Menjadi kelompok mahasiswa yang unggul, inovatif, dan berkontribusi positif dalam teknologi dan data science.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🚀</div>
+                <h3>Misi</h3>
+                <p>Bekerja sama secara kolaboratif, mengembangkan keterampilan teknis, dan menyelesaikan setiap tantangan optimal.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🤝</div>
+                <h3>Nilai</h3>
+                <p>Integritas, kerja sama, inovasi, dan tanggung jawab adalah fondasi setiap langkah kami menuju kesuksesan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">Elite <span>Globals</span></div>
+                <p class="footer-text">Portfolio Kelompok Mahasiswa | AI & Data Science</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="#members">Anggota</a></li>
+                <li><a href="#about">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Elite Globals. Built with <span>♥</span> by our team.
+        </div>
+    </footer>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 2200);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
