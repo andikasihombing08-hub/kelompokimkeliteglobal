@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Anggota 4 - Elite Globals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-container">
+        <div class="bg-grid"></div>
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="chart-lines">
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="scan-line"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">Elite Globals</a>
+        <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/#members">Anggota</a></li>
+            <li><a href="/#about">Tentang</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span>SYSTEM ONLINE</span>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-hero">
+        <div class="profile-card">
+            <div class="profile-corner-bl"></div>
+            
+            <div class="profile-image-wrapper">
+                <div class="profile-ring"></div>
+                <div class="profile-ring-2"></div>
+                <img src="{{ url_for('static', filename='images/member4.jpg') }}" alt="Member 2" class="profile-image">
+            </div>
+            
+            <h1>RAPIP IHSAN MANURUNG</h1>
+            <p class="profile-role">Data Analyst</p>
+            
+            <p class="profile-bio">
+                Saya senang mengeksplorasi data dan menemukan insight berharga di dalamnya. 
+                Setiap dataset adalah puzzle yang menantang untuk diselesaikan bersama tim.
+            </p>
+
+            <div class="profile-details">
+                <div class="detail-item">
+                    <div class="label">NIM</div>
+                    <div class="value">2509030002</div>
+                </div>
+                <div class="detail-item">
+                    <div class="label">Program Studi</div>
+                    <div class="value">SAINS DATA</div>
+                </div>
+                <div class="detail-item">
+                    <div class="label">Angkatan</div>
+                    <div class="value">2026</div>
+                </div>
+                <div class="detail-item">
+                    <div class="label">Fakultas</div>
+                    <div class="value">ilmu komputer dan teknologi</div>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <a href="/member1" class="btn btn-outline">← Sebelumnya</a>
+                <a href="/member3" class="btn btn-primary">Selanjutnya →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <div class="footer-brand">Elite <span>Globals</span></div>
+                <p class="footer-text">Portfolio Kelompok Mahasiswa | AI & Data Science</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/#members">Anggota</a></li>
+                <li><a href="/#about">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Elite Globals. Built with <span>♥</span> by our team.
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
